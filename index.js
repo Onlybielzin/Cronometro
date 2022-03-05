@@ -25,6 +25,7 @@ function timer() {
     }, 1000)
 }
 function parar() {
+    status = "parado"
     clearInterval(cronometro)
 }
 function reniciar() {
