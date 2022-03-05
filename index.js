@@ -11,11 +11,11 @@ function timer() {
         segundos = segundos + 1
         var format = (horas < 10 ? '0' + horas : horas) + ':' + (minutos < 10 ? '0' + minutos : minutos) + ':' + (segundos < 10 ? '0' + segundos : segundos);
         document.querySelector('h1').innerText = format
-        if (segundos == 5) {
+        if (segundos == 59) {
             segundos = 0
             minutos = minutos + 1
         }
-        if (minutos == 2) {
+        if (minutos == 59) {
             minutos = 0
             horas = horas + 1
         }
