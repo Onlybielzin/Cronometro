@@ -2,9 +2,12 @@ var segundos = 0
 var minutos = 0
 var horas = 0
 var cronometro
+var status
 
 function iniciar() {
+    if(status == "rodando") return alert('Cronometro já iniciado!')
     timer()
+    status = 'rodando'
 }
 function timer() {
     cronometro = setInterval(() => {
@@ -25,6 +28,7 @@ function parar() {
     clearInterval(cronometro)
 }
 function reniciar() {
+    status = "parado"
     clearInterval(cronometro)
     segundos = 0
     minutos = 0
